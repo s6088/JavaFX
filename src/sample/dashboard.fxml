@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.panel.Dashboard.Controller">
+   <children>
+      <MenuBar prefHeight="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="post">
+               <items>
+                  <MenuItem fx:id="post" mnemonicParsing="false" text="post" />
+                  <MenuItem fx:id="service" mnemonicParsing="false" text="service" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="profiles">
+               <items>
+                  <MenuItem fx:id="price" mnemonicParsing="false" text="price" />
+                  <MenuItem fx:id="overtime" mnemonicParsing="false" text="over time" />
+                  <MenuItem fx:id="vehicletype" mnemonicParsing="false" text="vehicle type" />
+                  <MenuItem fx:id="vehicle" mnemonicParsing="false" text="vehicle" />
+                  <MenuItem fx:id="driver" mnemonicParsing="false" text="driver" />
+                  <MenuItem fx:id="helper" mnemonicParsing="false" text="helper" />
+                  <MenuItem fx:id="servicename" mnemonicParsing="false" text="service name" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="report">
+               <items>
+                  <MenuItem fx:id="report" mnemonicParsing="false" text="report" />
+                  <MenuItem fx:id="servicecolor" mnemonicParsing="false" text="service color" />
+                  <MenuItem fx:id="util" mnemonicParsing="false" text="settings" />
+               </items></Menu>
+         </menus>
+      </MenuBar>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <ScrollPane prefHeight="200.0" prefWidth="370.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <content>
+                  <VBox alignment="TOP_CENTER" prefHeight="2000.0" prefWidth="355.0" spacing="5.0" style="-fx-background-color: #455A64;">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="335.0" text="Post" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets bottom="20.0" top="20.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="140.0" prefHeight="25.0" prefWidth="315.0" style="-fx-background-color: #37474F;">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="150.0" text="Created At" textFill="#ff8800">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXDatePicker fx:id="createdAt" defaultColor="#37474f" disable="true" prefHeight="30.0" prefWidth="130.0" style="-fx-text-inner-color: #000000; -fx-background-color: #ffffff;" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="110.0" prefHeight="25.0" prefWidth="315.0" style="-fx-background-color: #37474F;">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="150.0" text="Departure Date" textFill="#ff8800">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXDatePicker fx:id="departureDate" defaultColor="#37474f" prefHeight="30.0" prefWidth="130.0" style="-fx-text-inner-color: #000000; -fx-background-color: #ffffff;" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="170.0" prefHeight="25.0" prefWidth="315.0" style="-fx-background-color: #37474F;">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="150.0" text="DepartureTime" textFill="#ff8800">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXTimePicker fx:id="departureTime" defaultColor="#37474f" prefHeight="30.0" prefWidth="130.0" style="-fx-text-inner-color: #000000; -fx-background-color: #ffffff;" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="140.0" prefHeight="25.0" prefWidth="315.0" style="-fx-background-color: #37474F;">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="150.0" text="Arrival Date" textFill="#ff8800">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXDatePicker fx:id="arrivalDate" defaultColor="#37474f" prefHeight="30.0" prefWidth="130.0" style="-fx-text-inner-color: #000000; -fx-background-color: #ffffff;" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="185.0" prefHeight="25.0" prefWidth="315.0" style="-fx-background-color: #37474F;">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="150.0" text="Arrival Time" textFill="#ff8800">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXTimePicker fx:id="arrivalTime" defaultColor="#37474f" prefHeight="30.0" prefWidth="130.0" style="-fx-text-inner-color: #000000; -fx-background-color: #ffffff;" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="95.0" prefHeight="25.0" prefWidth="332.0" style="-fx-background-color: #37474F;">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="150.0" text="Vehicle Id" textFill="#ff8800">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="vehicle1" prefHeight="25.0" prefWidth="130.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="420.0" prefHeight="25.0" prefWidth="332.0" style="-fx-background-color: #37474F;">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="150.0" text="Driver Id" textFill="#ff8800">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="driver1" prefHeight="25.0" prefWidth="130.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="465.0" prefHeight="25.0" prefWidth="332.0" style="-fx-background-color: #37474F;">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="150.0" text="Helper Id" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="helper1" prefHeight="25.0" prefWidth="130.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="510.0" prefHeight="25.0" prefWidth="332.0" style="-fx-background-color: #37474F;">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="150.0" text="Departure Km" textFill="#ff8800">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="departureKm" prefHeight="25.0" prefWidth="130.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="555.0" prefHeight="25.0" prefWidth="332.0" style="-fx-background-color: #37474F;">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="150.0" text="Arrival Km" textFill="#ff8800">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="arrivalKm" prefHeight="25.0" prefWidth="130.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="600.0" prefHeight="25.0" prefWidth="332.0" style="-fx-background-color: #37474F;">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="150.0" text="User" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="user" prefHeight="25.0" prefWidth="130.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="645.0" prefHeight="25.0" prefWidth="332.0" style="-fx-background-color: #37474F;">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="150.0" text="From" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="from" prefHeight="25.0" prefWidth="130.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="690.0" prefHeight="25.0" prefWidth="332.0" style="-fx-background-color: #37474F;">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="150.0" text="To" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="to" prefHeight="25.0" prefWidth="130.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="376.0" prefWidth="355.0" style="-fx-background-color: #37474F;">
+                           <children>
+                              <VBox prefHeight="560.0" prefWidth="350.0" spacing="5.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="335.0" text="Expenses" textFill="WHITE">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="315.0">
+                                       <children>
+                                          <Label prefHeight="30.0" prefWidth="150.0" text="Expense Date" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXDatePicker fx:id="expenseDate" defaultColor="#424242" prefHeight="30.0" prefWidth="130.0" style="-fx-text-inner-color: #000000; -fx-background-color: #ffffff;" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="332.0">
+                                       <children>
+                                          <Label prefHeight="30.0" prefWidth="150.0" text="Purpose" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="purpose" prefHeight="30.0" prefWidth="130.0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="332.0">
+                                       <children>
+                                          <Label prefHeight="30.0" prefWidth="150.0" text="Memo" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="memo" prefHeight="30.0" prefWidth="130.0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="332.0">
+                                       <children>
+                                          <Label prefHeight="30.0" prefWidth="150.0" text="Remark" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="remark" prefHeight="30.0" prefWidth="130.0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="332.0">
+                                       <children>
+                                          <Label fx:id="total" prefHeight="30.0" prefWidth="150.0" text="Total Unit" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="totalAmmount" prefHeight="30.0" prefWidth="130.0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="332.0">
+                                       <children>
+                                          <Label prefHeight="30.0" prefWidth="150.0" text="Taka" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXCheckBox fx:id="taka" prefHeight="30.0" prefWidth="130.0" text="." unCheckedColor="WHITE" />
+                                       </children>
+                                    </HBox>
+                                    <TableView fx:id="myTableView" prefHeight="200.0" prefWidth="200.0" />
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="100.0" prefHeight="40.0" prefWidth="332.0" visible="false">
+                                       <children>
+                                          <Label prefHeight="30.0" prefWidth="150.0" text="Expenses Id" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="myIdentity" disable="true" prefHeight="30.0" prefWidth="130.0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                                 <children>
+                                    <JFXButton fx:id="myAdd" prefHeight="10.0" prefWidth="10.0" style="-fx-background-color: CDDC39;">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton fx:id="myDelete" prefHeight="10.0" prefWidth="10.0" style="-fx-background-color: #FF7043;">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton fx:id="myUpdate" prefHeight="10.0" prefWidth="10.0" style="-fx-background-color: F9A825;">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton fx:id="myClear" prefHeight="10.0" prefWidth="10.0" style="-fx-background-color: #ffffff;">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="300.0" spacing="10.0">
+                           <children>
+                              <JFXButton fx:id="add" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: CDDC39;" text="Add" />
+                              <JFXButton fx:id="delete" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #FF7043;" text="Delete" />
+                              <JFXButton fx:id="update" layoutX="62.0" layoutY="10.0" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: F9A825;" text="Update" />
+                              <JFXButton fx:id="clear" layoutX="114.0" layoutY="10.0" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #ffffff;" text="Clear" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="332.0" style="-fx-background-color: #37474F;" visible="false">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="150.0" text="Id" textFill="#ff8800">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="identity" disable="true" prefHeight="30.0" prefWidth="130.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <TableView fx:id="tableView" prefHeight="200.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="370.0" AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="0.0" />
+            <TableView fx:id="panel" layoutX="380.0" layoutY="10.0" prefHeight="200.0" prefWidth="250.0" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <JFXButton fx:id="publish" onAction="#publish" prefHeight="40.0" style="-fx-background-color: #123456;" text="publish" textFill="WHITE" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="375.0" AnchorPane.rightAnchor="255.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="preview" layoutX="385.0" layoutY="365.0" onAction="#preview" prefHeight="40.0" prefWidth="240.0" style="-fx-background-color: #123456;" text="preview" textFill="WHITE" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      </children>
+</AnchorPane>

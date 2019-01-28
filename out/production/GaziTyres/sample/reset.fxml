@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #212121;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ResetController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="400.0" spacing="10.0" AnchorPane.bottomAnchor="150.0" AnchorPane.rightAnchor="100.0">
+         <children>
+            <Label text="Reset Password" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font></Label>
+            <Label layoutX="10.0" layoutY="10.0" text="Please answer the question below and get back your account" textFill="#44ab39">
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding></Label>
+            <Label layoutX="10.0" layoutY="69.0" text="What is the name of the town where you were born?" textFill="WHITE" />
+            <TextField fx:id="q1" layoutX="10.0" layoutY="44.0" />
+            <Label layoutX="10.0" layoutY="195.0" text="Who was your childhood hero?" textFill="WHITE" />
+            <TextField fx:id="q2" layoutX="10.0" layoutY="212.0" />
+            <Label layoutX="10.0" layoutY="69.0" text="New Password" textFill="WHITE" />
+            <PasswordField fx:id="password" />
+            <Label layoutX="10.0" layoutY="111.0" text="Confirm Password" textFill="WHITE" />
+            <PasswordField fx:id="cpassword" layoutX="10.0" layoutY="128.0" />
+            <JFXButton fx:id="reset" onAction="#reset" prefWidth="100.0" style="-fx-background-color: #123456;" text="Reset" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></JFXButton>
+            <Hyperlink fx:id="login" text="login" textFill="#26a4da">
+               <font>
+                  <Font size="14.0" />
+               </font></Hyperlink>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

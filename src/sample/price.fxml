@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PricesController">
+   <children>
+      <ScrollPane prefHeight="200.0" prefWidth="370.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="355.0" spacing="5.0" style="-fx-background-color: #455A64;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="335.0" text="Pricing" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="40.0" prefWidth="332.0" style="-fx-background-color: #37474F;">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="150.0" text="Material Name" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="materialName" prefHeight="30.0" prefWidth="130.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="95.0" prefHeight="40.0" prefWidth="332.0" style="-fx-background-color: #37474F;">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="150.0" text="Price Per Unit" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="unitPrice" prefHeight="30.0" prefWidth="130.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="332.0" spacing="20.0">
+                     <children>
+                        <JFXButton fx:id="add" prefHeight="30.0" prefWidth="65.0" style="-fx-background-color: CDDC39;" text="Add">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="delete" layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="65.0" style="-fx-background-color: #FF7043;" text="Delete">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="update" layoutX="62.0" layoutY="10.0" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: F9A825;" text="Update">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="clear" layoutX="114.0" layoutY="10.0" prefHeight="30.0" prefWidth="65.0" style="-fx-background-color: #ffffff;" text="Clear">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children></VBox>
+         </content>
+      </ScrollPane>
+      <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="370.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>
